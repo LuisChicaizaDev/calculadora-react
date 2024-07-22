@@ -1,5 +1,5 @@
 import React from 'react'; // en versiones actuales se puede omitir
-import '../stylesheets/button.css';
+import '../stylesheets/Button.css';
 
 /* props.children los componentes tendrán etiquetas de apertura y cierre
 * Todo lo que esté dentro de la etiqueta sera un hijo del componente
