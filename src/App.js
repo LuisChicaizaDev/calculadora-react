@@ -37,28 +37,28 @@ function App() {
         <Display input = {input} />
 
         <div className='row'>
-          <Button controlClick = {addInput}>1</Button>
-          <Button controlClick = {addInput}>2</Button>
-          <Button controlClick = {addInput}>3</Button>
-          <Button controlClick = {addInput}>+</Button>
+          <Button controlClick = {addInput}>7</Button>
+          <Button controlClick = {addInput}>8</Button>
+          <Button controlClick = {addInput}>9</Button>
+          <Button controlClick = {addInput}>/</Button>
         </div>
         <div className='row'>
           <Button controlClick = {addInput}>4</Button>
           <Button controlClick = {addInput}>5</Button>
           <Button controlClick = {addInput}>6</Button>
-          <Button controlClick = {addInput}>-</Button>
-        </div>
-        <div className='row'>
-          <Button controlClick = {addInput}>7</Button>
-          <Button controlClick = {addInput}>8</Button>
-          <Button controlClick = {addInput}>9</Button>
           <Button controlClick = {addInput}>*</Button>
         </div>
         <div className='row'>
-          <Button controlClick = {calculateResult}>=</Button>
-          <Button controlClick = {addInput}>0</Button>
+          <Button controlClick = {addInput}>1</Button>
+          <Button controlClick = {addInput}>2</Button>
+          <Button controlClick = {addInput}>3</Button>
+          <Button controlClick = {addInput}>-</Button>
+        </div>
+        <div className='row'>
           <Button controlClick = {addInput}>.</Button>
-          <Button controlClick = {addInput}>/</Button>
+          <Button controlClick = {addInput}>0</Button>
+          <Button controlClick = {calculateResult}>=</Button>
+          <Button controlClick = {addInput}>+</Button>
         </div>
         <div className='row'>
           <ButtonClear controlClear = {() => setInput('')}>
