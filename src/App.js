@@ -4,6 +4,7 @@ import Button from './components/Button';
 import Display from './components/Display';
 import ButtonClear from './components/ButtonClear';
 import { useState } from 'react'; //Utilizamos un Hook para el controlar el estado
+import { evaluate } from 'mathjs'; //importamos una librería para calcular las operaciones
 
 // Componente Button con props.children
 function App() {
@@ -12,6 +13,14 @@ function App() {
 
   const addInput = value => {
     setInput(input + value);
+  };
+
+  const calculateResult = () => {
+    if(input){
+      setInput(evaluate(input));
+    }else{
+      alert('Introduce valores para realizar la operación');
+    }
   };
 
   return (
@@ -46,7 +55,7 @@ function App() {
           <Button controlClick = {addInput}>*</Button>
         </div>
         <div className='row'>
-          <Button controlClick = {addInput}>=</Button>
+          <Button controlClick = {calculateResult}>=</Button>
           <Button controlClick = {addInput}>0</Button>
           <Button controlClick = {addInput}>.</Button>
           <Button controlClick = {addInput}>/</Button>
