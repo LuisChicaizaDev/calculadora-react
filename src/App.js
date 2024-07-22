@@ -2,6 +2,7 @@ import './App.css';
 import logoLuis from './img/logo-luis-developer.png';
 import Button from './components/Button';
 import Display from './components/Display';
+import ButtonClear from './components/ButtonClear';
 
 // Componente Button con props.children
 function App() {
@@ -17,7 +18,7 @@ function App() {
       <div className='contenedor-calculadora'>
 
         <Display />
-        
+
         <div className='row'>
           <Button>1</Button>
           <Button>2</Button>
@@ -43,7 +44,7 @@ function App() {
           <Button>/</Button>
         </div>
         <div className='row'>
-
+          <ButtonClear>Clear</ButtonClear>
         </div>
       </div>
 
