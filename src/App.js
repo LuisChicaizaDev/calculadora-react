@@ -52,7 +52,9 @@ function App() {
           <Button controlClick = {addInput}>/</Button>
         </div>
         <div className='row'>
-          <ButtonClear>Clear</ButtonClear>
+          <ButtonClear controlClear = {() => setInput('')}>
+            Clear
+          </ButtonClear>
         </div>
       </div>
 
