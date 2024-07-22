@@ -12,7 +12,7 @@ function Button(props){
 
   // Función para saber si es un operador o no 
   const isOperator = valor => {
-    return isNaN(valor) && (valor != '.' ) && (valor != '=');
+    return isNaN(valor) && (valor !== '.' ) && (valor !== '=');
   }
 
     return(
