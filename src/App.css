@@ -1,0 +1,40 @@
+.App{
+  height: 100vh;
+  background-color: #cec8c8;
+  padding-top: 16px;
+  font-family: Lato, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.logo-contenedor{
+  width: 100%;
+  height: auto;
+  margin: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo-luis{
+  height: 96px;
+}
+
+/*calculadora*/
+.contenedor-calculadora{
+  width: 400px;
+  height: 600px;
+  padding: 14px;
+  background-color: #74a3d8;
+  border-radius: 20px;
+  border: 4px solid #fff;
+}
+
+.row{
+  margin: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
