@@ -15,9 +15,14 @@ function Button(props){
     return isNaN(valor) && (valor !== '.' ) && (valor !== '=');
   }
 
+  // Función para detectar y dar estilos al signo igual
+  const isEqualSign = valor => {
+    return valor === '=';
+  }
+
     return(
         <div 
-          className={`button-container ${isOperator(props.children) ? 'operator' : ''}`.trimEnd()}
+          className={`button-container ${isOperator(props.children) ? 'operator' : ''}${isEqualSign(props.children) ? 'result-button' : ''}`.trimEnd()}
           onClick = {() => props.controlClick(props.children)} >
           {props.children}
         </div>

@@ -26,3 +26,10 @@
 .operator:hover{
   background-color: #ff6600;
 }
+
+.result-button{
+  background-color: rgb(21, 39, 196);
+}
+.result-button:hover{
+  background-color: rgb(56, 74, 237);
+}
