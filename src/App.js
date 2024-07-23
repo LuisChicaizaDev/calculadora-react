@@ -1,5 +1,6 @@
 import './App.css';
 import logoLuis from './img/logo-luis-developer.png';
+import Logo from './components/Logo';
 import Button from './components/Button';
 import Display from './components/Display';
 import ButtonClear from './components/ButtonClear';
@@ -25,12 +26,11 @@ function App() {
 
   return (
     <div className="App">
-      <div className='logo-contenedor'>
-        <img 
-          src= {logoLuis}
-          className='logo-luis'
-          alt = 'Logo Luis' />
-      </div>
+     
+      <Logo 
+        src = {logoLuis}
+        alt = 'Logo Luis Chicaiza'
+      />
 
       <div className='contenedor-calculadora'>
 
