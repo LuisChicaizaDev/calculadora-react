@@ -4,29 +4,56 @@ import Logo from './components/Logo';
 import Button from './components/Button';
 import Display from './components/Display';
 import ButtonClear from './components/ButtonClear';
-import { useState } from 'react'; //Utilizamos un Hook para el controlar el estado
-import { evaluate } from 'mathjs'; //importamos una librería para calcular las operaciones
+import { useState } from 'react';
+import { evaluate } from 'mathjs';
 
-// Componente Button con props.children
+
 function App() {
 
   const [input, setInput] = useState('');
+  const [isResult, setIsResult] = useState(false);
 
   const addInput = value => {
-    setInput(input + value);
+    if (isResult) {
+      if (isOperator(value)) {
+        // Si es un operador, continúa la operación con el resultado anterior
+        setInput(prevInput => prevInput + value);
+      } else {
+        // Si es un número o un punto, comienza una nueva operación
+        setInput(value);
+      }
+      setIsResult(false);
+    } else {
+      setInput(prevInput => {
+        if (isOperator(value) && isOperator(prevInput.slice(-1))) {
+          return prevInput.slice(0, -1) + value; // Reemplaza el último operador introducido (5+*)
+        }
+        return prevInput + value;
+      });
+    }
+  };
+
+  const isOperator = char => {
+    return ['+', '-', '*', '/'].includes(char);
   };
 
   const calculateResult = () => {
-    if(input){
-      setInput(evaluate(input));
-    }else{
+    if (input) {
+      try {
+        const result = evaluate(input);
+        setInput(result.toString()); // Muestra el resultado y lo convierte en cadena
+        setIsResult(true); // Marca que hemos mostrado un resultado
+      } catch (error) {
+        alert('Error en la operación');
+        setInput('');
+      }
+    } else {
       alert('Introduce valores para realizar la operación');
     }
   };
 
   return (
     <div className="App">
-     
       <Logo 
         src = {logoLuis}
         alt = 'Logo Luis Chicaiza'
@@ -66,7 +93,6 @@ function App() {
           </ButtonClear>
         </div>
       </div>
-
     </div>
   );
 }
