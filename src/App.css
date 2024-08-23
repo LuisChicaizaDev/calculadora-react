@@ -1,9 +1,10 @@
 .App{
-  height: 100vh;
   background-color: #cec8c8;
   padding-top: 16px;
   font-family: Lato, sans-serif;
   display: flex;
+  flex-direction: column;
+  gap: 16px;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;

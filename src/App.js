@@ -93,6 +93,13 @@ function App() {
           </ButtonClear>
         </div>
       </div>
+
+      <div className='copyright'>
+        <a href='https://github.com/LuisChicaizaDev'>
+         by: LuisChicaizaDev
+        </a>
+      </div>
+
     </div>
   );
 }
